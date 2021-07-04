@@ -39,6 +39,6 @@ public class CountYZTest {
         String input = "day fyyyz";
         Integer expected = 2;
         Integer actual = stringsAndThings.countYZ(input);
-        Assert.assertEquals(expected, actual);
+        Assert.assert(expected, actual);
     }
 }

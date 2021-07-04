@@ -1,6 +1,8 @@
 package io.zipcoder;
 
 
+import java.util.Objects;
+
 /**
  * @author tariq
  */
@@ -15,8 +17,17 @@ public class StringsAndThings {
      *           countYZ("day fyyyz"); // Should return 2
      */
     public Integer countYZ(String input){
-        return null;
-    }
+        int count=0;
+        String[] arrayOfWords = input.split("");
+        for(int i=0; i<= arrayOfWords.length; i++){
+            String word = arrayOfWords[i];
+            int numberOfCharactersInWord = word.length();
+            int lastIndex = numberOfCharactersInWord-1;
+            char lastCharacter = word.charAt(lastIndex);
+            if (lastCharacter=='y'||lastCharacter=='z')
+            count++;
+        }return count;
+        }
 
     /**
      * Given two strings, base and remove, return a version of the base string where all instances of the remove string have
@@ -28,7 +39,10 @@ public class StringsAndThings {
      *           removeString("Hello there", "x") // Should return "Hello there"
      */
     public String removeString(String base, String remove){
-        return null;
+
+
+
+        return base.replaceAll(remove,"");
     }
 
     /**
@@ -40,7 +54,19 @@ public class StringsAndThings {
      *           containsEqualNumberOfIsAndNot("noisxxnotyynotxisi") // Should return true
      */
     public Boolean containsEqualNumberOfIsAndNot(String input){
-        return null;
+        int isCount =0;
+        int notCount=0;
+        for(int currentLetter=0;currentLetter<input.length();currentLetter++){
+
+        if (input.charAt(currentLetter)=='i'&& input.charAt(currentLetter+1)=='s'){
+            isCount++;
+            }
+        if (input.charAt(currentLetter)=='n'&& input.charAt(currentLetter+1)=='o'&& input.charAt(currentLetter+2)=='t'){
+        notCount++;}
+        }
+
+
+        return Objects.equals(isCount, notCount);
     }
 
     /**
@@ -51,7 +77,22 @@ public class StringsAndThings {
      *           gHappy("xxggyygxx") // Should return  false
      */
     public Boolean gIsHappy(String input){
-        return null;
+        int count =0;
+        char theG='g';
+         String input="";
+        for (int i = 0; i < input.length(); i++) {
+            if(i==theG){
+                for (int j = 1; j < input.length(); j++) {
+                    if(j==theG){
+                        return true;
+                    }else{return false;}
+
+                }
+            }
+
+
+        }
+        return input;
     }
 
 
@@ -63,6 +104,11 @@ public class StringsAndThings {
      *            countTriple("a") // Should return 0
      */
     public Integer countTriple(String input){
+        if(int x=-1; x<input.length(); x++){
+            return true;
+            if(int y=0; y)
+
+            }
         return null;
     }
 }
